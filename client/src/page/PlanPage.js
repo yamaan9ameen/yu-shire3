@@ -28,7 +28,7 @@ const PlanPage = () => {
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:5000/departments/${name}`)
+      .get(`https://sharia-yu.onrender.com/departments/${name}`)
       .then((response) => {
         setDepartment(response.data);
       })
@@ -48,7 +48,7 @@ const PlanPage = () => {
   const handleGeneratePlan = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:5000/departments/${name}/plan`,
+        `https://sharia-yu.onrender.com/departments/${name}/plan`,
         {
           year,
           semester,
