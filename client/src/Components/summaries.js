@@ -40,14 +40,12 @@ export const addSummaryLink = async (departmentName, materialId, data) => {
             `${API_BASE_URL}/${departmentName}/materials/${materialId}/summaries/link`,
             {
                 method: 'POST',
-headers: {
-            "Content-Type": "multipart/form-data",
-        },
+
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data),
- credentials: "include",
+
             }
         );
         return handleResponse(response, 'فشل في إضافة رابط الملخص');
@@ -65,9 +63,13 @@ export const addSummaryFile = async (departmentName, materialId, formData) => {
             `${API_BASE_URL}/${departmentName}/materials/${materialId}/summaries/file`,
             {
                 method: 'POST',
+                headers: {
+            "Content-Type": "multipart/form-data",
+        },
                 body: formData,
             },
- credentials: "include",
+
+
         );
         return handleResponse(response, 'فشل في رفع ملف الملخص');
     } catch (error) {
