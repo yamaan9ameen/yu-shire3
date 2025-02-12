@@ -23,7 +23,7 @@ const ResetPassword = () => {
 
         try {
             // إرسال طلب إعادة تعيين كلمة المرور
-            const response = await axios.post('http://localhost:5000/api/auth/reset-password', {
+            const response = await axios.post('https://sharia-yu.onrender.com/api/auth/reset-password', {
                 email,
                 code,
                 newPassword,
