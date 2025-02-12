@@ -21,7 +21,7 @@ const LoginPage = () => {
 
         try {
             // إرسال طلب تسجيل الدخول إلى الخادم
-            const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+            const response = await axios.post('https://sharia-yu.onrender.com/api/auth/login', { email, password });
 
             // تخزين التوكن وبيانات المستخدم في localStorage
             localStorage.setItem('token', response.data.token);
