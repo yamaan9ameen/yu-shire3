@@ -33,7 +33,7 @@ const NewsDetails = () => {
   
     const deleteNews = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/news/${id}`, {
+        const response = await fetch(`https://sharia-yu.onrender.com/api/news/${id}`, {
           method: 'DELETE',
         });
         if (!response.ok) throw new Error('فشل في حذف الخبر');
