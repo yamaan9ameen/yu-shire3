@@ -20,7 +20,7 @@ const NewsDetails = () => {
     const fetchNewsDetails = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:5000/api/news/${id}`);
+        const response = await fetch(`https://sharia-yu.onrender.com/api/news/${id}`);
         if (!response.ok) throw new Error('فشل في جلب تفاصيل الخبر');
         const data = await response.json();
         setNewsItem(data);
