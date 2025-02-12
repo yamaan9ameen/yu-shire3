@@ -16,7 +16,7 @@ const VerifyEmail = () => {
         e.preventDefault();
         try {
             console.log('بيانات التحقق المرسلة:', { email, verificationCode }); // طباعة البيانات المرسلة
-            const response = await axios.post('http://localhost:5000/api/auth/verify', { email, verificationCode });
+            const response = await axios.post('https://sharia-yu.onrender.com/api/auth/verify', { email, verificationCode });
             console.log('استجابة الخادم:', response.data); // طباعة استجابة الخادم
 
             if (response.data.success) {
@@ -33,7 +33,7 @@ const VerifyEmail = () => {
     const resendVerificationCode = async () => {
         setIsResending(true); // تعيين حالة الإرسال إلى true
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/resend-code', { email });
+            const response = await axios.post('https://sharia-yu.onrender.com/api/auth/resend-code', { email });
             console.log('استجابة إعادة الإرسال:', response.data); // طباعة استجابة الخادم
 
             if (response.data.success) {
