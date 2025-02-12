@@ -44,6 +44,7 @@ export const addSummaryLink = async (departmentName, materialId, data) => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data),
+ credentials: "include",
             }
         );
         return handleResponse(response, 'فشل في إضافة رابط الملخص');
@@ -62,7 +63,8 @@ export const addSummaryFile = async (departmentName, materialId, formData) => {
             {
                 method: 'POST',
                 body: formData,
-            }
+            },
+ credentials: "include",
         );
         return handleResponse(response, 'فشل في رفع ملف الملخص');
     } catch (error) {
