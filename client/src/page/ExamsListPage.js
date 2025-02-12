@@ -23,7 +23,7 @@ const ExamsListPage = () => {
         const fetchExams = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:5000/departments/${department}/materials/${materialId}/exams`
+                    `https://sharia-yu.onrender.com/departments/${department}/materials/${materialId}/exams`
                 );
                 setExams(response.data);
             } catch (err) {
