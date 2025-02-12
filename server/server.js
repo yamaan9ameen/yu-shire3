@@ -32,6 +32,7 @@ app.use('/api/users', userRoutes);
 app.use('/departments', examRoutes);
 app.use('/api', newsRoutes);
 app.use('/download', express.static(path.join(__dirname, 'uploads/summaries')));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
@@ -51,6 +52,7 @@ app.use((req, res) => {
         message: 'المسار غير موجود'
     });
 });
+
 
 app.use(express.static('public', {
     setHeaders: (res, filePath) => {
