@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Container, Card, Button } from 'react-bootstrap';
+import { Container, Card, Button, Spinner } from 'react-bootstrap';
 import axios from 'axios';
 import '../css/DepartmentDetail.css';
 
@@ -20,16 +20,22 @@ const DepartmentDetail = () => {
     }, [name]);
 
     if (!department) {
-        return <div>جاري التحميل...</div>;
+        return (
+            <Container className="text-center mt-5">
+                <Spinner animation="border" role="status">
+                    <span className="visually-hidden">جاري التحميل...</span>
+                </Spinner>
+            </Container>
+        );
     }
 
     return (
         <Container className="department-detail">
-            <h1 className="text-center">{department.name}</h1>
+            <h1 className="text-center">{department?.name || "القسم غير متوفر"}</h1>
             <Card>
                 <Card.Body>
-                    <Card.Text>{department.description}</Card.Text>
-                    <Card.Text>{department.intro}</Card.Text>
+                    <Card.Text>{department?.description || "لا يوجد وصف متاح."}</Card.Text>
+                    <Card.Text>{department?.intro || "لا يوجد مقدمة متاحة."}</Card.Text>
                 </Card.Body>
             </Card>
             {/* الأزرار تحت المعلومات */}
