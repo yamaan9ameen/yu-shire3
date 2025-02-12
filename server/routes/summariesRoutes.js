@@ -71,6 +71,8 @@ router.get('/:departmentName/materials/:materialId/summaries', async (req, res) 
 
 // إضافة ملخص (رابط)
 router.post('/:departmentName/materials/:materialId/summaries/link', async (req, res) => {
+console.log('📥 استقبلنا طلب إضافة ملخص:', req.body);
+    res.status(200).json({ message: 'تم استقبال البيانات' });
     try {
         const { departmentName, materialId } = req.params;
         const { title, link, uploader } = req.body;
