@@ -40,6 +40,9 @@ export const addSummaryLink = async (departmentName, materialId, data) => {
             `${API_BASE_URL}/${departmentName}/materials/${materialId}/summaries/link`,
             {
                 method: 'POST',
+headers: {
+            "Content-Type": "multipart/form-data",
+        },
                 headers: {
                     'Content-Type': 'application/json',
                 },
