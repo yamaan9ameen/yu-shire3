@@ -1,5 +1,5 @@
 // الرابط الأساسي للـ API
-const API_BASE_URL = 'https://sharia-yu.onrender.com/api/summaries';
+const API_BASE_URL = '/api/summaries';
 
 /**
  * التحقق من صحة الاستجابة وإرجاع البيانات أو رمي خطأ
