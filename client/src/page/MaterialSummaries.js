@@ -133,7 +133,7 @@ const SummaryCard = ({ summary, onDelete, userRole }) => {
             // const filename = summary.content.split('/').pop();
             // إنشاء رابط التنزيل
             
-            const downloadLink = `http://localhost:5000/api/summaries/download/${summary.content}`;
+            const downloadLink = `https://sharia-yu.onrender.com/api/summaries/download/${summary.content}`;
             //             // فتح الرابط في نافذة جديدة لبدء التنزيل
             window.open(downloadLink, '_blank');
         }
