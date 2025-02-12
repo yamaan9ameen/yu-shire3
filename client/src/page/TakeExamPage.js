@@ -22,7 +22,7 @@ const TakeExamPage = () => {
         const fetchExam = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:5000/departments/${department}/materials/${materialId}/exams/${examId}`
+                    `https://sharia-yu.onrender.com/departments/${department}/materials/${materialId}/exams/${examId}`
                 );
                 setExam(response.data);
                 setAnswers(new Array(response.data.questions.length).fill(''));
@@ -43,7 +43,7 @@ const TakeExamPage = () => {
 
         try {
             const response = await axios.post(
-                `http://localhost:5000/departments/${department}/materials/${materialId}/exams/${examId}/submit`,
+                `https://sharia-yu.onrender.com/departments/${department}/materials/${materialId}/exams/${examId}/submit`,
                 {
                     userId,
                     answers,
