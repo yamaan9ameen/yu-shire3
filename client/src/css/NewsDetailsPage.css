@@ -1,0 +1,172 @@
+/* تنسيق الحاوية الرئيسية */
+.news-details-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #C2FFC7; /* استخدام اللون الأخضر الفاتح */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق البطاقة */
+.news-card {
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* تنسيق صورة الخبر */
+.news-card-img {
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+    border-bottom: 3px solid #9EDF9C; /* استخدام اللون الأخضر المتوسط */
+}
+
+/* تنسيق العنوان */
+.news-title {
+    font-size: 2.2rem;
+    color: #62825D; /* استخدام اللون الأخضر الداكن */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* تنسيق معلومات الخبر (الكاتب، التاريخ) */
+.news-info {
+    font-size: 1rem;
+    color: #526E48; /* استخدام اللون الأخضر الزيتوني الداكن */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.news-info span {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.news-info .fa-calendar-alt,
+.news-info .fa-user {
+    color: #9B9B9B;
+}
+
+/* تنسيق نص الخبر */
+.news-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #34495E;
+    margin-bottom: 2rem;
+    padding: 0 15px;
+}
+
+/* تنسيق أزرار الحذف والعودة */
+/* أزرار الحذف والعودة */
+.card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background-color: #9EDF9C; /* اللون الأخضر المتوسط */
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.delete-btn:hover {
+    background-color: #62825D; /* اللون الأخضر الداكن */
+}
+
+.back-btn {
+    background-color: #C2FFC7; /* اللون الأخضر الفاتح */
+    color: #526E48; /* اللون الأخضر الزيتوني الداكن */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.back-btn:hover {
+    background-color: #9EDF9C; /* اللون الأخضر المتوسط */
+    color: white;
+}
+
+/* تخصيص الزر عند التمرير عليه */
+.card-footer .btn:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+/* تخصيص زر العودة للخلف */
+.back-btn {
+    margin-left: 10px;
+}
+
+/* إضافة تباعد إضافي بين النصوص داخل الخبر */
+.news-content p {
+    margin-bottom: 1.5rem;
+}
+
+.news-content a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-content a:hover {
+    text-decoration: underline;
+}
+
+/* تخصيص خلفية للأزرار في حالة الفأرة عليها */
+.card-footer .btn:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+/* تخصيص تنسيق الصفحة عند عرض الصفحة بشكل كامل */
+@media (max-width: 768px) {
+    .news-details-container {
+        padding: 10px;
+    }
+
+    .news-card {
+        border-radius: 5px;
+    }
+
+    .news-card-img {
+        height: 250px;
+    }
+
+    .news-title {
+        font-size: 1.8rem;
+    }
+
+    .news-info {
+        font-size: 0.9rem;
+    }
+
+    .news-content {
+        font-size: 1rem;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .delete-btn, .back-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

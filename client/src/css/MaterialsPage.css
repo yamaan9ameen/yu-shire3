@@ -1,0 +1,340 @@
+/* MaterialsPage.css */
+
+/* اتجاه الصفحة من اليمين إلى اليسار */
+.materials-page {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+    font-family: 'Tajawal', sans-serif; /* خط عربي أنيق */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* تباعد بين العناصر */
+    background: linear-gradient(135deg, #C2FFC7, #9EDF9C); /* تدرج لوني */
+    animation: fadeIn 1s ease-out; /* حركة ظهور تدريجي */
+}
+
+.materials-page h1 {
+    font-size: 2.5rem;
+    color: #526E48; /* لون العنوان الرئيسي */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل للنص */
+    margin-bottom: 1rem;
+    animation: slideInDown 0.8s ease-out; /* حركة ظهور من الأعلى */
+    position: relative;
+}
+
+.materials-page h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #62825D; /* لون الخط تحت العنوان */
+    margin: 20px auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    animation: lineGrow 1s ease-out; /* حركة نمو الخط */
+}
+
+.materials-page h1:hover::after {
+    width: 100px; /* زيادة عرض الخط عند التمرير */
+}
+
+/* تنسيقات حقل البحث */
+.materials-page .search-container {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    animation: fadeInUp 1s ease-out; /* حركة ظهور من الأسفل */
+}
+
+.materials-page .form-control {
+    border: 2px solid #9EDF9C; /* لون حدود الحقل */
+    border-radius: 25px; /* حواف أكثر استدارة */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #62825D; /* لون النص */
+    background-color: #ffffff; /* لون خلفية الحقل */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل للحقل */
+    padding-right: 3rem; /* إضافة مساحة للأيقونة */
+}
+
+.materials-page .form-control:focus {
+    border-color: #62825D; /* لون حدود الحقل عند التركيز */
+    box-shadow: 0 0 8px rgba(98, 130, 93, 0.3); /* ظل عند التركيز */
+    outline: none;
+}
+
+.materials-page .search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #62825D; /* لون الأيقونة */
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.materials-page .search-icon:hover {
+    transform: translateY(-50%) scale(1.2); /* تكبير الأيقونة عند التحويم */
+}
+
+/* تنسيقات قائمة المواد */
+.materials-page .list-group {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 1rem;
+    animation: fadeInUp 1.2s ease-out; /* حركة ظهور من الأسفل */
+}
+
+.materials-page .list-group-item {
+    border: 2px solid #9EDF9C; /* لون حدود العنصر */
+    border-radius: 15px; /* حواف أكثر استدارة */
+    margin-bottom: 0.75rem;
+    padding: 1.25rem;
+    background-color: #ffffff; /* لون خلفية العنصر */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer; /* تغيير شكل المؤشر */
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* تباعد بين العناصر داخل العنصر */
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-out; /* حركة ظهور تدريجي */
+}
+
+.materials-page .list-group-item::before {
+    content: '📚'; /* أيقونة الكتاب */
+    font-size: 1.2rem;
+    color: #62825D; /* لون الأيقونة */
+    margin-left: 0.5rem; /* تباعد بين الأيقونة والنص */
+    transition: transform 0.3s ease;
+}
+
+.materials-page .list-group-item:hover::before {
+    transform: rotate(15deg); /* تدوير الأيقونة عند التحويم */
+}
+
+.materials-page .list-group-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f0f8f0; /* لون خلفية العنصر عند التحويم */
+}
+
+.materials-page .list-group-item strong {
+    color: #526E48; /* لون النص الغامق */
+    font-size: 1.1rem;
+    flex: 1; /* توسيع النص لملء المساحة المتاحة */
+}
+
+.materials-page .list-group-item p {
+    color: #62825D; /* لون النص */
+    font-size: 1rem;
+    margin: 0;
+    flex: 1; /* توسيع النص لملء المساحة المتاحة */
+}
+
+.materials-page .list-group-item::after {
+    content: '→'; /* أيقونة السهم */
+    font-size: 1.2rem;
+    color: #62825D; /* لون الأيقونة */
+    transition: transform 0.3s ease;
+}
+
+.materials-page .list-group-item:hover::after {
+    transform: translateX(5px); /* تحريك الأيقونة عند التحويم */
+}
+
+/* تنسيقات Accordion */
+.materials-page .accordion-header {
+    background-color: #C2FFC7; /* لون خلفية العنوان */
+    color: #526E48; /* لون النص */
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 15px; /* حواف أكثر استدارة */
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل للعنوان */
+    animation: fadeInUp 1.5s ease-out; /* حركة ظهور من الأسفل */
+}
+
+.materials-page .accordion-header::before {
+    content: '📖'; /* أيقونة الكتاب المفتوح */
+    font-size: 1.2rem;
+    color: #62825D; /* لون الأيقونة */
+    margin-left: 0.5rem; /* تباعد بين الأيقونة والنص */
+    transition: transform 0.3s ease;
+}
+
+.materials-page .accordion-header:hover::before {
+    transform: rotate(15deg); /* تدوير الأيقونة عند التحويم */
+}
+
+.materials-page .accordion-header:hover {
+    background-color: #9EDF9C; /* لون خلفية العنوان عند التحويم */
+    transform: translateY(-2px);
+}
+
+.materials-page .accordion-body {
+    padding: 1.25rem;
+    background-color: #ffffff; /* لون خلفية الجسم */
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل للجسم */
+    animation: fadeIn 1.8s ease-out; /* حركة ظهور تدريجي */
+}
+
+/* زر العودة */
+.materials-page .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: none;
+    color: white;
+    background: linear-gradient(135deg, #62825D, #526E48); /* تدرج لوني */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* تباعد بين الأيقونة والنص */
+    animation: fadeInUp 2s ease-out; /* حركة ظهور من الأسفل */
+}
+
+.materials-page .btn::before {
+    content: '←'; /* أيقونة السهم */
+    font-size: 1.2rem;
+    color: white; /* لون الأيقونة */
+    transition: transform 0.3s ease;
+}
+
+.materials-page .btn:hover::before {
+    transform: translateX(-5px); /* تحريك الأيقونة عند التحويم */
+}
+
+.materials-page .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.materials-page .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.materials-page .btn-secondary {
+    background: linear-gradient(135deg, #9EDF9C, #62825D);
+}
+
+.materials-page .btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* تحسينات إضافية */
+.materials-page .row {
+    width: 100%;
+    max-width: 800px; /* تحديد عرض الصف */
+}
+
+.materials-page .col {
+    margin-bottom: 1rem;
+}
+
+/* تحسينات للخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* تحسينات للعرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .materials-page h1 {
+        font-size: 2rem;
+    }
+
+    .materials-page .form-control {
+        font-size: 0.9rem;
+    }
+
+    .materials-page .list-group-item {
+        padding: 0.75rem;
+    }
+
+    .materials-page .accordion-header {
+        font-size: 1rem;
+    }
+}
+
+/* تعريفات الحركات (Animations) */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes lineGrow {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}

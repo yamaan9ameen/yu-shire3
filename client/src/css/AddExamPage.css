@@ -1,0 +1,298 @@
+/* AddExamPage.css */
+
+/* تنسيق الصفحة الرئيسية */
+.add-exam-page {
+    padding: 20px;
+    background-color: #C2FFC7; /* لون خلفية الصفحة */
+    min-height: 100vh; /* لجعل الصفحة تمتد لأسفل */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+    font-family: 'Tajawal', sans-serif; /* خط عربي أنيق */
+    animation: fadeIn 1s ease-out; /* حركة ظهور تدريجي */
+}
+
+/* تنسيق العنوان الرئيسي */
+.page-title {
+    color: #526E48; /* لون النص */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* إضافة ظل للنص */
+    text-align: center; /* محاذاة النص لليمين */
+    animation: slideInDown 0.8s ease-out; /* حركة ظهور من الأعلى */
+    margin-bottom: 2rem; /* تباعد أسفل العنوان */
+}
+
+/* تنسيق الرسائل التحذيرية والخطأ */
+.error-message {
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 1rem;
+    text-align: right; /* محاذاة النص لليمين */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+    animation: fadeIn 1.5s ease-out; /* حركة ظهور تدريجي */
+}
+
+.error-message.alert-danger {
+    background-color: #ffcccc; /* لون خلفية الخطأ */
+    border-color: #ff9999;
+    color: #cc0000;
+}
+
+/* تنسيق النموذج */
+.exam-form {
+    width: 100%;
+    max-width: 800px; /* تحديد عرض النموذج */
+    background-color: #9EDF9C; /* لون خلفية النموذج */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: slideInUp 0.8s ease-out; /* حركة ظهور من الأسفل */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    color: #526E48; /* لون النص */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid #62825D; /* لون الحدود */
+    border-radius: 10px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #526E48; /* لون النص */
+    background-color: #C2FFC7; /* لون خلفية الحقول */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #526E48; /* لون الحدود عند التركيز */
+    box-shadow: 0 0 8px rgba(82, 110, 72, 0.3); /* ظل عند التركيز */
+}
+
+/* تنسيق البطاقة */
+.question-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #9EDF9C; /* لون خلفية البطاقة */
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInUp 0.8s ease-out; /* حركة ظهور من الأسفل */
+    margin-bottom: 1.5rem; /* تباعد بين البطاقات */
+}
+
+.question-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* تنسيق الأزرار */
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* تباعد بين الأيقونة والنص */
+    direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+    animation: fadeInUp 1.2s ease-out; /* حركة ظهور من الأسفل */
+}
+
+.submit-exam-btn {
+    background-color: #62825D; /* لون الخلفية */
+    color: white; /* لون النص */
+}
+
+.submit-exam-btn:hover {
+    background-color: #526E48; /* لون الخلفية عند التمرير */
+    transform: translateY(-2px);
+    animation: shake 0.3s ease-in-out; /* حركة اهتزاز عند التمرير */
+}
+
+.add-question-btn {
+    background-color: #9EDF9C; /* لون الخلفية */
+    color: #526E48; /* لون النص */
+}
+
+.add-question-btn:hover {
+    background-color: #C2FFC7; /* لون الخلفية عند التمرير */
+    transform: translateY(-2px);
+}
+
+.delete-question-btn {
+    background-color: #ff6b6b; /* لون الخلفية */
+    color: white; /* لون النص */
+}
+
+.delete-question-btn:hover {
+    background-color: #ff5252; /* لون الخلفية عند التمرير */
+    transform: translateY(-2px);
+}
+
+/* تنسيق Spinner (التحميل) */
+.spinner-border {
+    color: #62825D; /* لون Spinner */
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 0.25em;
+    animation: spin 1s linear infinite; /* حركة دوران */
+}
+
+/* إضافة أيقونات */
+.submit-exam-btn::before {
+    content: '📝'; /* أيقونة الامتحان */
+    font-size: 1.2rem;
+    color: white; /* لون الأيقونة */
+    transition: transform 0.3s ease;
+}
+
+.submit-exam-btn:hover::before {
+    transform: rotate(15deg); /* تدوير الأيقونة عند التحويم */
+}
+
+.add-question-btn::before {
+    content: '➕'; /* أيقونة الإضافة */
+    font-size: 1.2rem;
+    color: #526E48; /* لون الأيقونة */
+    transition: transform 0.3s ease;
+}
+
+.add-question-btn:hover::before {
+    transform: scale(1.2); /* تكبير الأيقونة عند التحويم */
+}
+
+/* إيموجي للساعة في حقل التاريخ */
+.form-group.date-group::before {
+    content: '📅'; /* أيقونة الساعة */
+    font-size: 1.2rem;
+    color: #526E48; /* لون الأيقونة */
+    margin-left: 0.5rem;
+}
+
+/* إيموجي للأسئلة */
+.questions-title::before {
+    content: '📚'; /* أيقونة الأسئلة */
+    font-size: 1.2rem;
+    color: #526E48; /* لون الأيقونة */
+    margin-left: 0.5rem;
+}
+
+/* إيموجي للإجابات الصحيحة */
+.form-group.correct-answer-group::before {
+    content: '✅'; /* أيقونة الإجابة الصحيحة */
+    font-size: 1.2rem;
+    color: #526E48; /* لون الأيقونة */
+    margin-left: 0.5rem;
+}
+
+/* تحسينات للعرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .question-card {
+        padding: 1rem;
+    }
+
+    .form-control,
+    .form-select {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* تعريفات الحركات (Animations) */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* أنيميشن لظهور البطاقات بشكل متتالي */
+@keyframes cardAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.question-card {
+    animation: cardAppear 0.5s ease-out forwards;
+    animation-delay: calc(var(--index) * 0.2s); /* تأخير لكل بطاقة */
+}

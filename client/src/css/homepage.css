@@ -1,0 +1,327 @@
+/* تحميل خطوط إضافية */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Tajawal', 'Cairo', sans-serif;
+    background-color: #f0f8f0; /* خلفية فاتحة للصفحة */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* منع التمرير الأفقي */
+}
+
+.homepage-container {
+    background-color: #C2FFC7; /* خلفية خفيفة مناسبة */
+    color: #526E48; /* لون النص الداكن */
+    border-radius: 20px; /* زيادة تقوس الحواف */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* تأثير الظل */
+    padding: 60px 40px; /* زيادة المساحة الداخلية */
+    direction: rtl; /* جعل المحتوى يبدأ من اليمين إلى اليسار */
+    max-width: 1200px; /* تحديد عرض الصفحة */
+    margin: 40px auto; /* توسيط الصفحة */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثيرات التفاعل */
+    position: relative;
+    overflow: hidden;
+    animation: float 6s ease-in-out infinite; /* حركة طفو */
+}
+
+.homepage-container:hover {
+    transform: translateY(-10px); /* رفع الصفحة عند التمرير */
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2); /* زيادة تأثير الظل */
+}
+
+.homepage-title {
+    font-family: 'Cairo', sans-serif;
+    font-size: 3rem; /* زيادة حجم العنوان */
+    font-weight: bold;
+    color: #62825D;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* تأثير النص */
+    text-align: right; /* توسيط العنوان إلى اليمين */
+    margin-bottom: 30px; /* زيادة المسافة السفلية */
+    position: relative; /* لإضافة تأثيرات إضافية */
+    animation: fadeInDown 1s ease-out, shake 2s infinite 3s; /* حركة ظهور واهتزاز */
+}
+
+.homepage-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #62825D; /* لون الخط تحت العنوان */
+    margin: 20px 0 0 auto; /* توسيط الخط تحت العنوان */
+    border-radius: 2px;
+    transition: width 0.3s ease; /* تأثير تغيير العرض */
+    animation: lineGrow 1.5s ease-out; /* حركة نمو الخط */
+}
+
+.homepage-title:hover::after {
+    width: 120px; /* زيادة عرض الخط عند التمرير */
+}
+
+.homepage-text {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.3rem; /* زيادة حجم النص */
+    line-height: 1.8;
+    text-align: right; /* جعل النص يبدأ من اليمين */
+    margin-bottom: 30px; /* زيادة المسافة السفلية */
+    direction: rtl; /* جعل الكتابة من اليمين إلى اليسار */
+    color: #526E48; /* لون النص الداكن */
+    transition: color 0.3s ease; /* تأثير تغيير اللون */
+    animation: fadeInUp 1.5s ease-out; /* حركة ظهور النص */
+}
+
+.homepage-text:hover {
+    color: #62825D; /* تغيير لون النص عند التمرير */
+    animation: pulse 1s infinite; /* حركة نبض */
+}
+
+.verse-text {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.3rem; /* زيادة حجم النص */
+    line-height: 1.8;
+    text-align: right; /* جعل النص يبدأ من اليمين */
+    margin-bottom: 30px; /* زيادة المسافة السفلية */
+    direction: rtl; /* جعل الكتابة من اليمين إلى اليسار */
+    color: #526E48; /* لون النص الداكن */
+    transition: color 0.3s ease; /* تأثير تغيير اللون */
+    animation: fadeInUp 2s ease-out; /* حركة ظهور النص */
+}
+
+.verse-text:hover {
+    color: #62825D; /* تغيير لون النص عند التمرير */
+    /* animation: rotate 1s ease-in-out; حركة دوران */
+}
+
+/* إضافة أيقونات */
+.homepage-container::before {
+    content: '🏫'; /* أيقونة المدرسة */
+    font-size: 4rem;
+    color: #62825D;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+     transition: transform 0.3s ease;  /*تأثير تحريك الأيقونة */
+    /* animation: bounce 2s infinite, spin 4s linear infinite; /* حركة ارتداد ودوران */
+}
+
+.homepage-container:hover::before {
+    transform: scale(1.2); /* تكبير الأيقونة عند التمرير */
+}
+
+/* تحسينات للعرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .homepage-container {
+        padding: 40px 20px; /* تقليل المساحة الداخلية */
+        margin: 20px auto; /* تقليل المساحة الخارجية */
+    }
+   
+    .homepage-title {
+        font-size: 2.2rem; /* تقليل حجم العنوان */
+    }
+    .verse-text{
+        font-size: 1.1rem; /* تقليل حجم النص */
+    }
+    .homepage-text {
+        font-size: 1.1rem; /* تقليل حجم النص */
+    }
+
+    .homepage-container::before {
+        font-size: 3rem; /* تقليل حجم الأيقونة */
+    }
+}
+
+/* إضافة تأثيرات إضافية */
+.homepage-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #526E48; /* لون الشريط السفلي */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    animation: slideIn 1.5s ease-out; /* حركة ظهور الشريط */
+}
+
+.homepage-container:hover::after {
+    transform: scaleX(1); /* إظهار الشريط السفلي عند التمرير */
+}
+
+/* تنسيقات جديدة للأزرار */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* تباعد بين الأزرار */
+    margin-top: 2rem; /* تباعد من الأعلى */
+    animation: fadeInUp 2s ease-out; /* حركة ظهور الأزرار */
+}
+
+.buttons-container .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: none;
+    color: white;
+    background: linear-gradient(135deg, #62825D, #526E48); /* تدرج لوني */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    animation: float 4s ease-in-out infinite; /* حركة طفو للأزرار */
+}
+
+.buttons-container .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.buttons-container .btn:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.buttons-container .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    animation: shake 0.5s ease-in-out; /* حركة اهتزاز عند التمرير */
+}
+
+.buttons-container .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons-container .btn-primary {
+    background: linear-gradient(135deg, #62825D, #526E48);
+}
+
+.buttons-container .btn-success {
+    background: linear-gradient(135deg, #9EDF9C, #62825D);
+}
+
+.buttons-container .btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* إضافة أيقونات للأزرار */
+.buttons-container .btn::after {
+    content: '→'; /* أيقونة السهم */
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.buttons-container .btn:hover::after {
+    transform: translateX(5px); /* تحريك الأيقونة عند التمرير */
+}
+
+/* تعريفات الحركات (Animations) */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes lineGrow {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80px;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}

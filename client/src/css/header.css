@@ -1,0 +1,231 @@
+/* تنسيق الحاوية الرئيسية للـ Header */
+.header-container {
+    background: linear-gradient(135deg, #9EDF9C, #62825D); /* تدرج لوني لزيادة التأثير */
+    color: white; /* لون النص أبيض ليتناسب مع الخلفية */
+    text-align: center; /* جعل النص في وسط الصفحة */
+    padding: 120px 0; /* زيادة المسافة من الأعلى والأسفل */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* تأثير ظل أقوى لإعطاء عمق */
+    border-bottom: 8px solid #C2FFC7; /* إضافة خط سفلي يعزز الشكل */
+    position: relative; /* لإضافة تأثيرات إضافية */
+    overflow: hidden; /* لإخفاء الأجزاء الزائدة */
+}
+
+/* تنسيق العنوان الرئيسي */
+.header-title {
+    font-family: 'Segoe UI', sans-serif; /* اختيار خط حديث */
+    font-size: 4rem; /* تكبير حجم العنوان بشكل أكبر */
+    font-weight: 700; /* جعل العنوان أكثر سمكًا */
+    margin-bottom: 20px; /* مسافة بين العنوان والعنوان الفرعي */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* إضافة تأثير الظل للنص */
+    position: relative; /* لإضافة تأثيرات إضافية */
+    z-index: 1; /* لجعل النص فوق الخلفية */
+}
+
+/* تنسيق العنوان الفرعي */
+.header-subtitle {
+    font-size: 1.8rem; /* تكبير النص قليلاً */
+    font-weight: 300; /* جعل النص أخف لسهولة القراءة */
+    margin-bottom: 40px; /* إضافة مسافة أسفل العنوان الفرعي */
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2); /* إضافة تأثير الظل */
+    position: relative; /* لإضافة تأثيرات إضافية */
+    z-index: 1; /* لجعل النص فوق الخلفية */
+}
+
+/* تنسيق الزر */
+.start-btn {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    padding: 18px 50px !important;
+    border-radius: 50px !important;
+    border: 2px solid #C2FFC7 !important;
+    background-color: transparent !important;
+    color: #fff !important;
+    transition: all 0.3s ease-in-out !important;
+    position: relative; /* لإضافة تأثيرات إضافية */
+    z-index: 1; /* لجعل الزر فوق الخلفية */
+}
+
+/* تأثير الزر عند التمرير */
+.start-btn:hover {
+    background-color: #62825D; /* تغيير الخلفية عند التمرير */
+    color: #C2FFC7; /* تغيير اللون إلى الأبيض عند التمرير */
+    transform: translateY(-8px); /* رفع الزر قليلاً عند التمرير */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25); /* إضافة ظل عند التمرير */
+}
+
+/* إضافة تأثير عند دخول الصفحة */
+.header-container {
+    animation: fadeIn 2s ease-out;
+}
+
+/* تأثير الفادينج */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* تأثير التدرج اللوني للخلفية عند التمرير */
+.header-container:hover {
+    background: linear-gradient(135deg, #C2FFC7, #62825D); /* تغيير التدرج عند التمرير */
+}
+
+/* إضافة خلفية متحركة */
+.header-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.header-container:hover::before {
+    opacity: 1; /* إظهار الخلفية المتحركة عند التمرير */
+}
+
+/* إضافة أيقونات */
+.header-container::after {
+    content: '🏫'; /* أيقونة المدرسة */
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    transition: transform 0.3s ease;
+}
+
+.header-container:hover::after {
+    transform: translate(-50%, -50%) scale(1.2); /* تكبير الأيقونة عند التمرير */
+}
+
+/* تحسينات للعرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 80px 0; /* تقليل المساحة من الأعلى والأسفل */
+    }
+
+    .header-title {
+        font-size: 2.5rem; /* تقليل حجم العنوان */
+    }
+
+    .header-subtitle {
+        font-size: 1.2rem; /* تقليل حجم النص */
+    }
+
+    .start-btn {
+        font-size: 1rem !important;
+        padding: 12px 30px !important;
+    }
+
+    .header-container::after {
+        font-size: 4rem; /* تقليل حجم الأيقونة */
+    }
+}
+
+/* إضافة تأثيرات إضافية */
+.header-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #C2FFC7; /* لون الشريط السفلي */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.header-container:hover::after {
+    transform: scaleX(1); /* إظهار الشريط السفلي عند التمرير */
+}
+
+/* تحسينات للخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* تنسيقات جديدة للأزرار */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* تباعد بين الأزرار */
+    margin-top: 2rem; /* تباعد من الأعلى */
+}
+
+.buttons-container .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: none;
+    color: white;
+    background: linear-gradient(135deg, #62825D, #526E48); /* تدرج لوني */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.buttons-container .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.buttons-container .btn:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.buttons-container .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.buttons-container .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons-container .btn-primary {
+    background: linear-gradient(135deg, #62825D, #526E48);
+}
+
+.buttons-container .btn-success {
+    background: linear-gradient(135deg, #9EDF9C, #62825D);
+}
+
+.buttons-container .btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* إضافة أيقونات للأزرار */
+.buttons-container .btn::after {
+    content: '→'; /* أيقونة السهم */
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.buttons-container .btn:hover::after {
+    transform: translateX(5px); /* تحريك الأيقونة عند التمرير */
+}

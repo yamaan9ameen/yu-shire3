@@ -1,0 +1,227 @@
+/* styles.css */
+.register-page {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #C2FFC7; /* لون الخلفية */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* تأثير ظل أقوى */
+    direction: rtl; /* جعل المحتوى يبدأ من اليمين إلى اليسار */
+    position: relative; /* لإضافة تأثيرات إضافية */
+    overflow: hidden; /* لإخفاء الأجزاء الزائدة */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثيرات التمرير */
+}
+
+.register-page:hover {
+    transform: translateY(-5px); /* تحريك الحاوية قليلاً للأعلى */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* زيادة الظل عند التمرير */
+}
+
+.register-page h1 {
+    color: #526E48; /* لون النص الرئيسي */
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* إضافة ظل للنص */
+    text-align: center; /* توسيط العنوان */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    color: #526E48; /* لون نص التسمية */
+    font-weight: 500;
+    font-size: 1rem; /* تكبير حجم النص */
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    border: 2px solid #9EDF9C; /* لون حدود الحقل */
+    border-radius: 8px;
+    padding: 12px;
+    background-color: #FFFFFF; /* لون خلفية الحقل */
+    color: #62825D; /* لون نص الحقل */
+    font-size: 1rem;
+    width: 100%;
+    text-align: right; /* جعل النص يبدأ من اليمين */
+    direction: rtl; /* جعل الكتابة من اليمين إلى اليسار */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* تأثيرات التركيز */
+}
+
+.form-control:focus {
+    border-color: #62825D; /* لون حدود الحقل عند التركيز */
+    box-shadow: 0 0 8px rgba(98, 130, 93, 0.5); /* ظل عند التركيز */
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #9EDF9C; /* لون النص النائب */
+    opacity: 0.7;
+}
+
+.form-control[type="password"] {
+    letter-spacing: 1px; /* زيادة المسافة بين أحرف كلمة السر */
+}
+
+.form-control[as="select"] {
+    appearance: none; /* إزالة المظهر الافتراضي للقائمة المنسدلة */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23526E48'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+/* styles.css */
+/* styles.css */
+.btn-primary {
+    background-color: #9EDF9C !important; /* لون خلفية الزر */
+    border: none !important; /* إزالة الحدود */
+    color: #526E48 !important; /* لون نص الزر */
+    padding: 14px !important; /* المساحة الداخلية */
+    border-radius: 8px !important; /* زوايا دائرية */
+    font-size: 1.1rem !important; /* حجم الخط */
+    font-weight: bold !important; /* سمك الخط */
+    cursor: pointer !important; /* تغيير شكل المؤشر */
+    width: 100% !important; /* عرض كامل */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease !important; /* تأثيرات الانتقال */
+    position: relative !important; /* لإضافة تأثيرات إضافية */
+    overflow: hidden !important; /* لإخفاء الأجزاء الزائدة */
+    display: flex !important; /* عرض كعنصر مرن */
+    align-items: center !important; /* توسيط العناصر عموديًا */
+    justify-content: center !important; /* توسيط العناصر أفقيًا */
+    gap: 8px !important; /* تباعد بين النص والإيموجي */
+}
+
+.btn-primary:hover {
+    background-color: #62825D !important; /* لون خلفية الزر عند التحويم */
+    color: #FFFFFF !important; /* لون نص الزر عند التحويم */
+    transform: translateY(-3px) !important; /* تأثير رفع الزر */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2) !important; /* زيادة الظل عند التمرير */
+}
+
+.btn-primary:active {
+    transform: translateY(0) !important; /* إعادة الزر إلى وضعه الطبيعي عند النقر */
+}
+
+.btn-primary::before {
+    content: '' !important; /* محتوى العنصر الزائف */
+    position: absolute !important; /* وضع مطلق */
+    top: 50% !important; /* تحديد الموضع من الأعلى */
+    left: 50% !important; /* تحديد الموضع من اليسار */
+    width: 300% !important; /* عرض العنصر الزائف */
+    height: 300% !important; /* ارتفاع العنصر الزائف */
+    background: rgba(255, 255, 255, 0.1) !important; /* لون الخلفية */
+    transform: translate(-50%, -50%) rotate(45deg) !important; /* تحويل العنصر الزائف */
+    transition: all 0.5s ease !important; /* تأثيرات الانتقال */
+    z-index: 0 !important; /* تحديد الطبقة */
+}
+
+.btn-primary:hover::before {
+    width: 0 !important; /* إخفاء العنصر الزائف عند التمرير */
+    height: 0 !important; /* إخفاء العنصر الزائف عند التمرير */
+}
+
+.btn-primary::after {
+    font-size: 1.2rem !important; /* حجم الخط */
+    transition: transform 0.3s ease !important; /* تأثيرات الانتقال */
+    color: #526E48 !important; /* لون الإيموجي */
+}
+
+.btn-primary:hover::after {
+    transform: rotate(15deg) !important; /* تدوير الإيموجي عند التمرير */
+    color: #FFFFFF !important; /* تغيير لون الإيموجي عند التمرير */
+}
+
+.alert-danger {
+    background-color: #FFCCCC; /* لون خلفية التنبيه */
+    border-color: #FF6666; /* لون حدود التنبيه */
+    color: #CC0000; /* لون نص التنبيه */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    font-size: 0.9rem; /* تكبير حجم النص */
+    transition: opacity 0.3s ease; /* تأثيرات التمرير */
+}
+
+.alert-danger:hover {
+    opacity: 0.9; /* تغيير الشفافية عند التمرير */
+}
+
+.text-center a {
+    color: #526E48; /* لون الرابط */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem; /* تكبير حجم النص */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* تأثيرات التمرير */
+}
+
+.text-center a:hover {
+    color: #62825D; /* لون الرابط عند التحويم */
+    text-decoration: underline;
+}
+
+/* إضافة أيقونات */
+.register-page::before {
+    content: '📝'; /* أيقونة القلم */
+    font-size: 3rem;
+    color: rgba(82, 110, 72, 0.1);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+    transition: transform 0.3s ease;
+}
+
+.register-page:hover::before {
+    transform: scale(1.2); /* تكبير الأيقونة عند التمرير */
+}
+
+/* تحسينات للعرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .register-page {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .register-page h1 {
+        font-size: 1.8rem; /* تقليل حجم العنوان */
+    }
+
+    .form-control {
+        padding: 10px;
+        font-size: 0.9rem; /* تقليل حجم النص */
+    }
+
+    .btn-primary {
+        padding: 12px;
+        font-size: 1rem; /* تقليل حجم النص */
+    }
+
+    .alert-danger {
+        font-size: 0.8rem; /* تقليل حجم النص */
+    }
+
+    .text-center a {
+        font-size: 0.9rem; /* تقليل حجم النص */
+    }
+}
+
+/* تأثيرات إضافية */
+.register-page {
+    animation: fadeIn 0.5s ease-in-out; /* تأثير ظهور الصفحة */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

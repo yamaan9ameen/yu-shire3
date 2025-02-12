@@ -1,0 +1,176 @@
+/* تخصيص العنوان الرئيسي */
+.main-title {
+    color: #526E48; /* اللون الأخضر الداكن */
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* تخصيص الحقول البحثية */
+.search-filter-bar input {
+    background-color: #9EDF9C; /* اللون الأخضر المتوسط */
+    border: 1px solid #62825D;  /* اللون الأخضر الغامق */
+    padding: 0.8rem;
+    border-radius: 10px;
+}
+
+.search-filter-bar input:focus {
+    border-color: #526E48; /* اللون الأخضر الداكن */
+    box-shadow: 0 0 5px rgba(82, 110, 72, 0.3);
+}
+
+.search-filter-bar select {
+    background-color: #9EDF9C;
+    border: 1px solid #62825D;
+    padding: 0.8rem;
+    border-radius: 10px;
+}
+
+.search-filter-bar button {
+    background-color: #526E48; /* اللون الأخضر الداكن */
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.search-filter-bar button:hover {
+    background-color: #62825D; /* اللون الأخضر الغامق */
+}
+
+/* تخصيص شكل البطاقة */
+.news-card {
+    border: 1px solid #62825D;  /* اللون الأخضر الغامق */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-badge {
+    background-color: #C2FFC7; /* اللون الأخضر الفاتح */
+    color: #526E48; /* اللون الأخضر الداكن */
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* تخصيص النصوص داخل البطاقة */
+.card-title {
+    font-size: 1.5rem;
+    color: #526E48;
+    font-weight: bold;
+}
+
+.card-summary {
+    color: #62825D; /* اللون الأخضر الغامق */
+    font-size: 1rem;
+}
+
+/* تخصيص بيانات الخبر */
+.news-metadata {
+    font-size: 0.9rem;
+    color: #62825D; /* اللون الأخضر الغامق */
+}
+
+.news-metadata span {
+    margin-right: 1rem;
+}
+
+/* تخصيص أزرار المشاركة وقراءة المزيد */
+.card-footer {
+    background-color: #9EDF9C; /* اللون الأخضر المتوسط */
+    border-top: 1px solid #62825D;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-footer .btn-link {
+    color: #526E48; /* اللون الأخضر الداكن */
+    text-decoration: none;
+}
+
+.card-footer .btn-link:hover {
+    color: #C2FFC7; /* اللون الأخضر الفاتح */
+}
+
+/* تخصيص الأزرار الخاصة بالصفحات */
+.btn-primary {
+    background-color: #526E48; /* اللون الأخضر الداكن */
+    border: none;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #62825D; /* اللون الأخضر الغامق */
+}
+
+.btn-primary:disabled {
+    background-color: #E0E0E0;
+    cursor: not-allowed;
+}
+
+/* تخصيص نموذج إضافة الأخبار */
+.add-news-form {
+    background-color: #C2FFC7; /* اللون الأخضر الفاتح */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-news-form .form-control {
+    background-color: #9EDF9C; /* اللون الأخضر المتوسط */
+    border: 1px solid #62825D;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.add-news-form .form-control:focus {
+    border-color: #526E48; /* اللون الأخضر الداكن */
+    box-shadow: 0 0 5px rgba(82, 110, 72, 0.3);
+}
+
+.add-news-form .btn-primary {
+    background-color: #526E48; /* اللون الأخضر الداكن */
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.add-news-form .btn-primary:hover {
+    background-color: #62825D; /* اللون الأخضر الغامق */
+}
+
+.add-news-form .btn-secondary {
+    background-color: #E0E0E0;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.add-news-form .btn-secondary:hover {
+    background-color: #C2FFC7; /* اللون الأخضر الفاتح */
+}
+
+/* تخصيص معاينة الصورة */
+.img-preview {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}

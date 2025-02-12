@@ -1,0 +1,337 @@
+/* DepartmentDetail.css */
+
+/* اتجاه الصفحة من اليمين إلى اليسار */
+.department-detail {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+    font-family: 'Tajawal', sans-serif; /* خط عربي أنيق */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* تباعد بين العناصر */
+    background: linear-gradient(135deg, #C2FFC7, #9EDF9C); /* تدرج لوني باستخدام الألوان المحددة */
+    position: relative;
+    overflow: hidden; /* إخفاء الفقاعات الزائدة */
+    animation: fadeIn 1s ease-out; /* حركة ظهور تدريجي */
+}
+
+/* فقاعات الخلفية المتحركة */
+.department-detail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='50' cy='50' r='10' fill='%23ffffff' opacity='0.2' /></svg>");
+    animation: bubbles 20s linear infinite; /* حركة الفقاعات */
+    z-index: 0;
+}
+
+@keyframes bubbles {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.department-detail h1 {
+    font-size: 2.5rem;
+    color: #526E48; /* لون العنوان الرئيسي */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل للنص */
+    animation: slideInDown 0.8s ease-out; /* حركة ظهور من الأعلى */
+    position: relative;
+    z-index: 1; /* لجعل العنوان فوق الفقاعات */
+}
+
+.department-detail h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #62825D; /* لون الخط تحت العنوان */
+    margin: 20px auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    animation: lineGrow 1s ease-out; /* حركة نمو الخط */
+}
+
+.department-detail h1:hover::after {
+    width: 100px; /* زيادة عرض الخط عند التمرير */
+}
+
+.department-detail .card {
+    border: none;
+    border-radius: 20px; /* زيادة تقوس الحواف */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* تأثير الظل */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #C2FFC7, #9EDF9C); /* تدرج لوني باستخدام الألوان المحددة */
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* تحديد عرض البطاقة */
+    position: relative;
+    z-index: 1; /* لجعل الكارد فوق الفقاعات */
+    animation: fadeInUp 1s ease-out; /* حركة ظهور من الأسفل */
+}
+
+.department-detail .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    animation: pulse 1s infinite; /* حركة نبض عند التمرير */
+}
+
+.department-detail .card-body {
+    padding: 2rem;
+    position: relative;
+    z-index: 1; /* لجعل النص فوق الخلفية */
+}
+
+.department-detail .card-title {
+    font-size: 2rem;
+    color: #526E48; /* لون عنوان البطاقة */
+    font-weight: 600;
+    text-align: right; /* محاذاة النص لليمين */
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* إضافة ظل للنص */
+    animation: fadeIn 1.2s ease-out; /* حركة ظهور تدريجي */
+}
+
+.department-detail .card-text {
+    font-size: 1.1rem;
+    color: #62825D; /* لون النص */
+    line-height: 1.8;
+    text-align: right; /* محاذاة النص لليمين */
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1.5s ease-out; /* حركة ظهور تدريجي */
+}
+
+/* زر العودة */
+.department-detail .back-button {
+    text-align: left; /* محاذاة الزر لليسار */
+    margin-top: 2rem; /* تباعد من الأعلى */
+    animation: fadeInUp 1.5s ease-out; /* حركة ظهور من الأسفل */
+    z-index: 1; /* لجعل الزر فوق الفقاعات */
+}
+
+.department-detail .back-button a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #62825D; /* لون خلفية الزر */
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.department-detail .back-button a:hover {
+    background-color: #526E48; /* لون خلفية الزر عند المرور */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    animation: shake 0.3s ease-in-out; /* حركة اهتزاز عند التمرير */
+}
+
+/* تحسينات إضافية */
+.department-detail .card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #526E48; /* لون الشريط السفلي */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    animation: lineGrow 1s ease-out; /* حركة نمو الخط */
+}
+
+.department-detail .card:hover::after {
+    transform: scaleX(1);
+}
+
+/* تحسينات للخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* تنسيقات جديدة للأزرار */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* تباعد بين الأزرار */
+    margin-top: 2rem; /* تباعد من الأعلى */
+    animation: fadeInUp 1.8s ease-out; /* حركة ظهور من الأسفل */
+    z-index: 1; /* لجعل الأزرار فوق الفقاعات */
+}
+
+.buttons-container .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: none;
+    color: white;
+    background: linear-gradient(135deg, #62825D, #526E48); /* تدرج لوني */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.buttons-container .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.buttons-container .btn:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.buttons-container .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    animation: shake 0.3s ease-in-out; /* حركة اهتزاز عند التمرير */
+}
+
+.buttons-container .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons-container .btn-primary {
+    background: linear-gradient(135deg, #62825D, #526E48);
+}
+
+.buttons-container .btn-success {
+    background: linear-gradient(135deg, #9EDF9C, #62825D);
+}
+
+.buttons-container .btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* إضافة أيقونات للأزرار */
+.buttons-container .btn::after {
+    content: '→'; /* أيقونة السهم */
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.buttons-container .btn:hover::after {
+    transform: translateX(5px); /* تحريك الأيقونة عند التمرير */
+}
+
+/* تحسينات للعرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .department-detail h1 {
+        font-size: 2rem; /* تقليل حجم العنوان على الشاشات الصغيرة */
+    }
+
+    .department-detail .card-title {
+        font-size: 1.5rem; /* تقليل حجم العنوان داخل البطاقة */
+    }
+
+    .department-detail .card-text {
+        font-size: 1rem; /* تقليل حجم النص داخل البطاقة */
+    }
+
+    .buttons-container {
+        flex-direction: column; /* جعل الأزرار عمودية على الشاشات الصغيرة */
+        gap: 0.5rem;
+    }
+
+    .buttons-container .btn {
+        width: 100%; /* جعل الأزرار تمتد بالكامل */
+    }
+}
+
+/* تعريفات الحركات (Animations) */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes lineGrow {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes bubbles {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

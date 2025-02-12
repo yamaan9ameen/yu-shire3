@@ -1,0 +1,61 @@
+/* Guide.css */
+.guide-container {
+    padding: 20px;
+    font-family: 'Arial, sans-serif';
+    background-color: #C2FFC7; /* لون الخلفية الرئيسي */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  .guide-title {
+    text-align: center;
+    color: #526E48; /* لون النص الرئيسي */
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .guide-section {
+    background-color: #9EDF9C; /* لون خلفية الأقسام */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .guide-section h2 {
+    color: #62825D; /* لون عناوين الأقسام */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .guide-section p {
+    color: #526E48; /* لون النص */
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .guide-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .guide-section ul li {
+    background-color: #C2FFC7; /* لون خلفية العناصر */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .guide-section ul li a {
+    color: #526E48; /* لون الروابط */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .guide-section ul li a:hover {
+    color: #62825D; /* لون الروابط عند التمرير */
+  }

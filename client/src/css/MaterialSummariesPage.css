@@ -1,0 +1,189 @@
+/* تنسيق عام للصفحة */
+.material-summaries-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #C2FFC7; /* خلفية الصفحة */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out; /* حركة ظهور تدريجي */
+}
+
+/* تنسيق الهيدر */
+.material-summaries-page .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #9EDF9C; /* لون خلفية الهيدر */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: slideInDown 0.8s ease-out; /* حركة ظهور من الأعلى */
+}
+
+.material-summaries-page .header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #526E48; /* لون النص */
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* إضافة ظل للنص */
+}
+
+/* زر العودة */
+.material-summaries-page .back-button {
+    background-color: #62825D; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* حواف أكثر استدارة */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* تباعد بين الأيقونة والنص */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+    animation: fadeInUp 1s ease-out; /* حركة ظهور من الأسفل */
+}
+
+.material-summaries-page .back-button:hover {
+    background-color: #526E48; /* لون الخلفية عند التحويم */
+    transform: translateY(-3px); /* رفع الزر عند التمرير */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل */
+}
+
+.material-summaries-page .back-button::before {
+    content: '←'; /* أيقونة السهم */
+    font-size: 1.2rem;
+    color: white; /* لون الأيقونة */
+    transition: transform 0.3s ease;
+}
+
+.material-summaries-page .back-button:hover::before {
+    transform: translateX(-5px); /* تحريك الأيقونة عند التمرير */
+}
+
+/* تنسيق قائمة الملخصات */
+.material-summaries-page .summary-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* تباعد بين البطاقات */
+    animation: fadeInUp 1.2s ease-out; /* حركة ظهور من الأسفل */
+}
+
+/* تنسيق بطاقة الملخص */
+.material-summaries-page .summary-card {
+    background-color: #ffffff;
+    border: 1px solid #62825D;
+    border-radius: 15px; /* حواف أكثر استدارة */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1.5s ease-out; /* حركة ظهور تدريجي */
+}
+
+.material-summaries-page .summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.material-summaries-page .summary-card h5 {
+    color: #526E48;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* إضافة ظل للنص */
+}
+
+.material-summaries-page .summary-card p {
+    color: #62825D;
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 1.6; /* تحسين تباعد الأسطر */
+}
+
+.material-summaries-page .summary-card a {
+    color: #9EDF9C;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.material-summaries-page .summary-card a:hover {
+    color: #62825D; /* تغيير اللون عند التمرير */
+    text-decoration: underline;
+}
+
+.material-summaries-page .summary-card button {
+    background-color: #62825D;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 25px; /* حواف أكثر استدارة */
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* تباعد بين الأيقونة والنص */
+}
+
+.material-summaries-page .summary-card button:hover {
+    background-color: #526E48;
+    transform: translateY(-2px); /* رفع الزر عند التمرير */
+}
+
+.material-summaries-page .summary-card button::before {
+    content: '✏️'; /* أيقونة تعديل */
+    font-size: 1.2rem;
+    color: white; /* لون الأيقونة */
+    transition: transform 0.3s ease;
+}
+
+.material-summaries-page .summary-card button:hover::before {
+    transform: rotate(15deg); /* تدوير الأيقونة عند التمرير */
+}
+
+/* تعريفات الحركات (Animations) */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}

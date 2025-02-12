@@ -1,0 +1,15 @@
+body, html {
+    margin: 0; /* إزالة الهوامش الافتراضية */
+    padding: 0; /* إزالة الحشوة الافتراضية */
+    height: 100%; /* التأكد من أن الـ body يغطي كامل الشاشة */
+    display: block;
+   background-color: #9EDF9C; /* إضافة لون خلفية داكن للصفحة */
+    color: #BDC3C7; /* لون النص الفاتح للصفحة */
+}
+
+/* تنسيق الـ main-page */
+.main-page {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* التأكد من أن المحتوى يأخذ المساحة المتبقية */
+}

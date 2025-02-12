@@ -1,0 +1,252 @@
+/* تخصيص الـ Navbar */
+.custom-navbar {
+    background-color: #C2FFC7; /* اللون الأساسي */
+    border-bottom: 2px solid #9EDF9C; /* إضافة حدود بلون مميز */
+    box-shadow: 0px 4px 15px rgba(151, 255, 253, 0.2); /* تأثير الظل لإعطاء عمق أكثر */
+    transition: all 0.3s ease-in-out; /* إضافة تأثيرات التمرير */
+    padding: 10px 20px; /* زيادة المساحة الداخلية */
+    position: sticky; /* جعل الـ Navbar يلتصق بالأعلى */
+    top: 0;
+    z-index: 1000; /* التأكد من ظهور الـ Navbar فوق العناصر الأخرى */
+ /*   animation: slideDown 0.5s ease-out;  حركة ظهور من الأعلى */
+}
+
+/* تأثيرات التمرير للـ Navbar */
+.custom-navbar:hover {
+    box-shadow: 0px 8px 20px rgba(151, 255, 253, 0.3); /* زيادة الظل عند التمرير */
+    background-color: #A0F8A4; /* تغيير الخلفية عند التمرير */
+    animation: pulse 1s infinite; /* حركة نبض عند التمرير */
+}
+
+/* تخصيص الـ Navbar Brand */
+.navbar-brand {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem; /* تكبير حجم النص */
+    color: #010101 !important; /* اللون المميز */
+    letter-spacing: 1.5px; /* إضافة مسافة بين الحروف */
+    text-transform: uppercase; /* جعل النص بالأحرف الكبيرة */
+    transition: color 0.3s ease, transform 0.3s ease; /* تأثير اللون والتحريك عند التمرير */
+    display: flex;
+    align-items: center;
+    animation: fadeIn 1s ease-out; /* حركة ظهور تدريجي */
+}
+
+.navbar-brand:hover {
+    color: #1ABC9C !important; /* تغيير اللون عند التمرير */
+    transform: translateY(-3px); /* تحريك النص لأعلى عند التمرير */
+}
+
+.navbar-brand::before {
+    content: '🌿'; /* أيقونة نبات */
+    font-size: 2rem;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover::before {
+    transform: rotate(15deg); /* تدوير الأيقونة عند التمرير */
+    animation: bounce 0.5s ease-in-out; /* حركة ارتداد عند التمرير */
+}
+
+/* تخصيص الـ Nav Links */
+.nav-link {
+    font-size: 1.2rem; /* تكبير حجم النص */
+    font-weight: 500;
+    color: #9EDF9C; /* اللون الأساسي */
+    padding: 10px 15px; /* إضافة padding لتحسين التباعد */
+    border-radius: 5px; /* جعل الزوايا دائرية */
+    transition: all 0.3s ease; /* إضافة تأثيرات عند التمرير */
+    position: relative; /* لإضافة تأثيرات إضافية */
+    animation: fadeInUp 0.5s ease-out; /* حركة ظهور من الأسفل */
+}
+
+.nav-link:hover {
+    color: #1ABC9C; /* تغيير اللون عند التمرير */
+    background-color: #9EDF9C; /* تغيير الخلفية عند التمرير */
+    border-radius: 15px; /* جعل الزوايا أكثر دائرية */
+    text-decoration: none; /* إزالة الخط تحت النص */
+    animation: shake 0.3s ease-in-out; /* حركة اهتزاز عند التمرير */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1ABC9C;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1); /* إظهار الخط تحت الرابط عند التمرير */
+}
+
+/* تخصيص الـ Toggle عند الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        background-color: #1ABC9C; /* تغيير لون الأيقونة */
+        border-radius: 50px; /* جعل الزر دائري */
+        padding: 0.5rem 0.75rem; /* زيادة المساحة الداخلية */
+        animation: fadeIn 1s ease-out; /* حركة ظهور تدريجي */
+    }
+
+    .navbar-toggler-icon {
+        background-color: #FFFFFF; /* تغيير لون الأيقونة */
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-toggler:hover .navbar-toggler-icon {
+        transform: rotate(90deg); /* تدوير الأيقونة عند التمرير */
+        animation: spin 0.5s ease-in-out; /* حركة دوران عند التمرير */
+    }
+}
+
+/* تخصيص الـ Dropdown */
+.navbar-nav .dropdown-menu {
+    background-color: #C2FFC7; /* تغيير خلفية القائمة المنسدلة */
+    border: 1px solid #9EDF9C; /* إضافة حدود للقائمة المنسدلة */
+    box-shadow: 0px 8px 20px rgba(151, 255, 253, 0.3); /* إضافة ظل للقائمة المنسدلة */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* تأثير الخلفية والتحريك عند التمرير */
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    display: block;
+    animation: fadeIn 0.5s ease-out; /* حركة ظهور تدريجي */
+}
+
+.navbar-nav .dropdown-menu.show {
+    transform: scaleY(1); /* إظهار القائمة المنسدلة */
+    opacity: 1;
+    animation: slideDown 0.3s ease-out; /* حركة ظهور من الأعلى */
+}
+
+.navbar-nav .dropdown-menu:hover {
+    background-color: #A0F8A4; /* تغيير الخلفية عند التمرير */
+    animation: pulse 1s infinite; /* حركة نبض عند التمرير */
+}
+
+/* تخصيص الـ Dropdown Item */
+.navbar-nav .dropdown-item {
+    color: #1ABC9C; /* تغيير لون النص في القائمة المنسدلة */
+    transition: color 0.3s ease, background-color 0.3s ease; /* تأثير اللون والخلفية عند التمرير */
+    padding: 10px 15px; /* زيادة المساحة الداخلية */
+    animation: fadeInUp 0.5s ease-out; /* حركة ظهور من الأسفل */
+}
+
+.navbar-nav .dropdown-item:hover {
+    color: #FFFFFF; /* تغيير اللون عند التمرير */
+    background-color: #9EDF9C; /* تغيير الخلفية */
+    border-radius: 5px; /* جعل الزوايا دائرية */
+    animation: shake 0.3s ease-in-out; /* حركة اهتزاز عند التمرير */
+}
+
+/* إضافة تأثيرات إضافية للـ Navbar */
+.custom-navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.custom-navbar:hover::before {
+    opacity: 1; /* إظهار الخلفية المتحركة عند التمرير */
+}
+
+/* تحسينات للعرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.8rem; /* تقليل حجم النص */
+    }
+
+    .nav-link {
+        font-size: 1rem; /* تقليل حجم النص */
+    }
+
+    .navbar-nav .dropdown-menu {
+        width: 100%; /* جعل القائمة المنسدلة تمتد بالكامل */
+    }
+}
+
+/* تعريفات الحركات (Animations) */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}

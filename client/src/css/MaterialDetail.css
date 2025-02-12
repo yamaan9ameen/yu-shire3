@@ -1,0 +1,154 @@
+/* MaterialDetail.css */
+
+/* اتجاه الصفحة من اليمين إلى اليسار */
+.material-detail {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+    font-family: 'Tajawal', sans-serif; /* خط عربي أنيق */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* تباعد بين العناصر */
+}
+
+.material-detail h1 {
+    font-size: 2.5rem;
+    color: #526E48; /* لون العنوان الرئيسي */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* تنسيقات البطاقة */
+.material-detail .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #C2FFC7, #9EDF9C); /* تدرج لوني باستخدام الألوان المحددة */
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* تحديد عرض البطاقة */
+}
+
+.material-detail .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.material-detail .card-body {
+    padding: 2rem;
+}
+
+.material-detail .card-title {
+    font-size: 2rem;
+    color: #526E48; /* لون عنوان البطاقة */
+    font-weight: 600;
+    text-align: right; /* محاذاة النص لليمين */
+}
+
+.material-detail .card-text {
+    font-size: 1.1rem;
+    color: #62825D; /* لون النص */
+    line-height: 1.8;
+    text-align: right; /* محاذاة النص لليمين */
+}
+
+/* تأثيرات إضافية */
+.material-detail .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.material-detail .card:hover::before {
+    opacity: 1;
+}
+
+/* زر العودة */
+.material-detail .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: none;
+    color: white;
+    background: linear-gradient(135deg, #62825D, #526E48); /* تدرج لوني */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.material-detail .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.material-detail .btn:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.material-detail .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.material-detail .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.material-detail .btn-secondary {
+    background: linear-gradient(135deg, #9EDF9C, #62825D);
+}
+
+.material-detail .btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* تحسينات إضافية */
+.material-detail .card {
+    position: relative;
+}
+
+.material-detail .card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #526E48; /* لون الشريط السفلي */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.material-detail .card:hover::after {
+    transform: scaleX(1);
+}
+
+/* تحسينات للخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+}

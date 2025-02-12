@@ -1,0 +1,59 @@
+
+
+
+
+.custom-footer {
+    background-color: #62825D; /* خلفية داكنة */
+    color: #e2e6e9; /* لون النص الفاتح */
+    padding: 10px 0; /* تقليل الحجم بشكل عام */
+    margin-top: auto; /* سحب الفوتر للأسفل */
+    width: auto; /* التأكد من أن الفوتر يغطي العرض الكامل */
+    height: auto;
+    text-align: center; /* جعل النص في وسط الفوتر */
+}
+
+.footer-title {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #1ABC9C; /* لون عنوان الأقسام */
+    margin-bottom: 0.5rem;
+}
+
+.footer-link {
+    color: #BDC3C7;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    margin: 3px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #1ABC9C; /* تغيير اللون عند التمرير */
+    text-decoration: underline;
+}
+
+.footer-social-icon {
+    color: #BDC3C7;
+    font-size: 1rem;
+    margin-right: 12px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social-icon:hover {
+    color: #1ABC9C; /* تغيير اللون عند التمرير */
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: #BDC3C7;
+    text-align: center;
+}
+
+hr {
+    border-top: 1px solid #34495E;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,146 @@
+.profile-container {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+    font-family: 'Tajawal', sans-serif; /* خط عربي أنيق */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-container h1 {
+    font-size: 2.5rem;
+    color: #526E48; /* لون العنوان الرئيسي */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 2rem; /* تباعد تحت العنوان */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* ظل ناعم للنص */
+}
+
+.profile-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ظل أكثر نعومة */
+    background: linear-gradient(135deg, #C2FFC7, #9EDF9C); /* تدرج لوني باستخدام الألوان المحددة */
+    overflow: hidden;
+    max-width: 800px; /* تحديد عرض البطاقة */
+    width: 100%;
+    margin: 0 auto; /* توسيط البطاقة */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px); /* تأثير رفع البطاقة */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* زيادة الظل عند المرور */
+}
+
+.profile-card .profile-image-container {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.profile-card .profile-image {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #526E48; /* إطار الصورة */
+    border-radius: 50%; /* جعل الصورة دائرية */
+    object-fit: cover; /* التأكد من أن الصورة تملأ المساحة دون تشويه */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل ناعم للصورة */
+}
+
+.profile-card .profile-image:hover {
+    transform: scale(1.05); /* تكبير الصورة قليلاً عند المرور */
+    border-color: #62825D; /* تغيير لون الإطار عند المرور */
+}
+
+.profile-card .profile-title {
+    font-size: 2rem;
+    color: #526E48; /* لون عنوان البطاقة */
+    font-weight: 600;
+    margin-bottom: 1.5rem; /* تباعد تحت العنوان */
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* إضافة ظل ناعم للنص */
+}
+
+.profile-card .profile-info {
+    font-size: 1.1rem;
+    color: #62825D; /* لون النص */
+    line-height: 1.8;
+    margin-bottom: 1rem; /* تباعد بين العناصر */
+    text-align: right; /* محاذاة النص لليمين */
+    padding: 0 2rem; /* إضافة بعض الحشو للنص */
+}
+
+.profile-card .profile-info strong {
+    color: #526E48; /* لون النص الغامق */
+}
+
+.profile-card .edit-field {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 2rem; /* إضافة بعض الحشو للحقول */
+}
+
+.profile-card .edit-field .form-control {
+    flex: 1;
+    border: 1px solid #ddd; /* إضافة حدود للحقول */
+    border-radius: 8px; /* حواف مستديرة للحقول */
+    padding: 0.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.profile-card .edit-field .form-control:focus {
+    border-color: #62825D; /* تغيير لون الحدود عند التركيز */
+    outline: none;
+}
+
+.profile-card .edit-field .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px; /* حواف مستديرة للأزرار */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-card .edit-field .btn-success {
+    background-color: #62825D;
+    border-color: #62825D;
+}
+
+.profile-card .edit-field .btn-success:hover {
+    background-color: #526E48;
+    border-color: #526E48;
+    transform: translateY(-2px); /* تأثير رفع الزر عند المرور */
+}
+
+.profile-card .edit-field .btn-link {
+    color: #62825D;
+    padding: 0;
+    text-decoration: none; /* إزالة التسطير من الروابط */
+}
+
+.profile-card .edit-field .btn-link:hover {
+    color: #526E48;
+    text-decoration: underline; /* إضافة تسطير عند المرور */
+}
+
+/* إيموجيات */
+.emoji {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+/* تحسينات للخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f9f9f9; /* لون خلفية الصفحة */
+}
+
+
