@@ -20,7 +20,7 @@ const ForgotPassword = () => {
 
         try {
             // إرسال طلب إعادة تعيين كلمة المرور
-            const response = await axios.post('http://localhost:5000/api/auth/forgot-password', { email });
+            const response = await axios.post('https://sharia-yu.onrender.com/api/auth/forgot-password', { email });
 
             // عرض رسالة نجاح
             setSuccess('تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني.');
