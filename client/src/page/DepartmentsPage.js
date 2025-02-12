@@ -7,7 +7,7 @@ const DepartmentsPage = () => {
     const [departments, setDepartments] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/departments')
+        axios.get('https://sharia-yu.onrender.com/departments')
             .then((response) => {
                 setDepartments(response.data);
             })
