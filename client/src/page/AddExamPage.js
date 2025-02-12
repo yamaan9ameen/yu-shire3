@@ -102,7 +102,7 @@ const AddExamPage = () => {
 
         try {
             const response = await axios.post(
-                `http://localhost:5000/departments/${department}/materials/${materialId}/exams`,
+                `https://sharia-yu.onrender.com/departments/${department}/materials/${materialId}/exams`,
                 { name: title, date, questions }
             );
             alert('تمت إضافة الامتحان بنجاح!');
