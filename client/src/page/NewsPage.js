@@ -36,7 +36,7 @@ const NewsApp = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:5000/api/news?page=${page}&search=${searchQuery}`
+        `https://sharia-yu.onrender.com/api/news?page=${page}&search=${searchQuery}`
       );
       if (!response.ok) throw new Error('لا يوجد اخبار');
       
@@ -79,7 +79,7 @@ const NewsApp = () => {
         formData.append('image', selectedImage);
       }
 
-      const response = await fetch('http://localhost:5000/api/news', {
+      const response = await fetch('https://sharia-yu.onrender.com/api/news', {
         method: 'POST',
         body: formData,
       });
