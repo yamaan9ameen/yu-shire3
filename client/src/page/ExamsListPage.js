@@ -40,7 +40,7 @@ const ExamsListPage = () => {
         setIsDeleting(true);
         try {
             await axios.delete(
-                `http://localhost:5000/departments/${department}/materials/${materialId}/exams/${examId}`
+                `https://sharia-yu.onrender.com/${department}/materials/${materialId}/exams/${examId}`
             );
             setExams(exams.filter((exam) => exam._id !== examId)); // تحديث القائمة بعد الحذف
             setShowDeleteModal(false); // إغلاق النافذة المنبثقة
