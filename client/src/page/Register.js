@@ -41,7 +41,7 @@ const RegisterPage = () => {
                 year,
             };
 
-            const response = await axios.post('http://localhost:5000/api/auth/register', userData, {
+            const response = await axios.post('https://sharia-yu.onrender.com/api/auth/register', userData, {
                 headers: {
                     'Content-Type': 'application/json', // تأكد من أن الرأس مضبوط بشكل صحيح
                 },
