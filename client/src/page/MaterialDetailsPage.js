@@ -19,7 +19,7 @@ const MaterialDetailsPage = () => {
     useEffect(() => {
         const fetchMaterial = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/departments/${department}/materials/${materialId}`);
+                const response = await axios.get(`https://sharia-yu.onrender.com/departments/${department}/materials/${materialId}`);
                 const materialData = response.data;
                 setMaterial(materialData);
             } catch (err) {
