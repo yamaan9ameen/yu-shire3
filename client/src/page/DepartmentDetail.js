@@ -10,7 +10,7 @@ const DepartmentDetail = () => {
     const [department, setDepartment] = React.useState(null);
 
     React.useEffect(() => {
-        axios.get(`http://localhost:5000/departments/${name}`)
+        axios.get(`https://sharia-yu.onrender.com/departments/${name}`)
             .then((response) => {
                 setDepartment(response.data);
             })
