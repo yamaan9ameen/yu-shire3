@@ -40,7 +40,7 @@ const ProfilePage = () => {
         const fetchUserData = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const endpoint = userId ? `http://localhost:5000/api/profile/${userId}` : 'http://localhost:5000/api/profile';
+                const endpoint = userId ? `https://sharia-yu.onrender.com/api/profile/${userId}` : 'https://sharia-yu.onrender.com/api/profile';
                 const headers = userId ? {} : { Authorization: `Bearer ${token}` };
 
                 const response = await axios.get(endpoint, { headers });
@@ -69,7 +69,7 @@ const ProfilePage = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post(`http://localhost:5000/api/profile/${userId}/upload-image`, formData, {
+            const response = await axios.post(`https://sharia-yu.onrender.com/api/profile/${userId}/upload-image`, formData, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     'Content-Type': 'multipart/form-data',
@@ -92,7 +92,7 @@ const ProfilePage = () => {
         try {
             const token = localStorage.getItem('token');
             const response = await axios.put(
-                `http://localhost:5000/api/profile/${userId}/update`,
+                `https://sharia-yu.onrender.com/api/profile/${userId}/update`,
                 { [field]: updatedUser[field] },
                 {
                     headers: {
