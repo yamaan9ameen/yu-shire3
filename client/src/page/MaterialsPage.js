@@ -15,7 +15,7 @@ const MaterialsPage = () => {
     useEffect(() => {
         const fetchDepartment = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/departments/${name}`);
+                const response = await axios.get(`https://sharia-yu.onrender.com/departments/${name}`);
                 setDepartment(response.data);
             } catch (error) {
                 setError('حدث خطأ أثناء جلب بيانات القسم');
