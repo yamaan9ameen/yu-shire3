@@ -39,7 +39,7 @@ const UpdateRolePage = () => {
         setSuccess('');
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get(`http://localhost:5000/api/profile/${userId}`, {
+            const response = await axios.get(`https://sharia-yu.onrender.com/api/profile/${userId}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setUser(response.data);
@@ -63,7 +63,7 @@ const UpdateRolePage = () => {
         try {
             const token = localStorage.getItem('token');
             const response = await axios.put(
-                `http://localhost:5000/api/users/${userId}/update-role`,
+                `https://sharia-yu.onrender.com/api/users/${userId}/update-role`,
                 { role: newRole },
                 {
                     headers: { Authorization: `Bearer ${token}` },
